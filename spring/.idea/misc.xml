@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/spring01_primer/spring01_primer/pom.xml" />
+        <option value="$PROJECT_DIR$/spring02_primer/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring、/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/spring03_autoimmit/spring03_autoimmit/pom.xml" />
+        <option value="$PROJECT_DIR$/spring04_gather/spring04_gather/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../spring、/untitled/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

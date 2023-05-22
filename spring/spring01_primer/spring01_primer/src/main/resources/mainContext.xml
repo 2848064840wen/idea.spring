@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--导入spring-->
+
+    <!-- 方式1
+     配置Bean
+        id被bean起名字
+   <!-     class给bean定义的类型&ndash;&gt;
+    <bean id="bookDao" class="com.xuwencheng.dao.impl.BookDaoImpl"></bean>
+    <bean id="book" class="com.xuwencheng.service.impl.BookServiceImpl">
+        &lt;!&ndash;        配置server与dao的关系&ndash;&gt;
+        &lt;!&ndash;        property标签表示bean的属性
+                name表示配置哪一个属性
+                ref表示参照哪一个属性&ndash;&gt;
+        <property name="b" ref="bookDao"/>
+    </bean>-->
+
+    <!-- 方式2   静态工厂实例化-->
+    <!--    <bean id="bookDao" class="com.xuwencheng.factory.UserDaoFactory" factory-method="getBookDao"/>-->
+
+    <!-- 方式3    使用实例工厂-->
+    <!--    首先需要实例工厂-->
+    <!--
+        <bean id="userFactory" class="com.xuwencheng.factory.UserNewFactory"/>
+
+        &lt;!&ndash;    在进行调用方法&ndash;&gt;
+        <bean id="bookDao" factory-method="getUserDao" factory-bean="userFactory"/>
+    -->
+
+    <!--    方式4 使用FactoryBean实例化-->
+    <!--    <bean id="bookDao" class="com.xuwencheng.factory.UserDaoFactoryBean" />-->
+
+<!--    查看bean的生命命周期-->
+    <bean id="bookDao" class="com.xuwencheng.dao.impl.BookDaoImpl" init-method="init" destroy-method="destory"/>
+
+
+</beans>

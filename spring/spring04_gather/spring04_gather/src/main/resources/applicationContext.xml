@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="bookDao" class="com.xuwencheng.dao.impl.BookDaoImpl">
+        <!--给数组注入-->
+        <property name="array">
+            <array>
+                <value>0</value>
+                <value>1</value>
+                <value>2</value>
+            </array>
+        </property>
+
+        <!--集合注入-->
+        <property name="list">
+            <list>
+                <value>张三</value>
+                <value>李四</value>
+                <value>王五</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>zhangsan</value>
+                <value>lisi</value>
+                <value>wangwu</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+               <entry key="河南" value="张三"/>
+               <entry key="新疆" value="李四"/>
+               <entry key="黑龙江" value="王五"/>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+               <prop key="狗窝">二狗</prop>
+               <prop key="猫窝">Tom</prop>
+               <prop key="老鼠窝">杰克</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
